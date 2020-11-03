@@ -1,0 +1,54 @@
+<html>
+<header>
+   <title>Music Player</title>
+   <link rel = "stylesheet" type="text/css" href = "ipod.css"/>
+   <link href = "https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel = "stylesheet">
+</header>
+<body>
+   <!-- main body -->
+   <div id = "screen">
+      <!-- head bar -->
+      <div class="head-bar">
+         <!-- hypter-link and back button -->
+         <a href="songs.html" id = "headBar">
+            <div class="back-button"><i class="material-icons">arrow_back</i></div>
+         </a>
+      </div>
+      <!-- albums image -->
+      <img class="player-album-art" src="images/currents.jpg" alt="Currents Album Cover"/>
+      <!-- song info -->
+      <div>
+         <p id="player-song-name">The Less I Know The Better</p>
+         <p class="player-song-info"><em>Currents</em> - Tame Impala</p>
+      </div>
+      <!-- player bar -->
+      <input id="player-time" type="range" value = "0" min = "0" max = "180">
+      <div id="time-elapsed">0:00</div>
+      <div id="time-total">3:00</div>
+      <!-- player controls -->
+      <div class="player-controls">
+         <button onclick = "prevSong()"><i class = "material-icons">skip_previous</i></button>
+         <button onclick = "switchPlay()" id = "play-pause"><i class="material-icons">play_arrow</i></button>
+         <button onclick = "nextSong()"><i class = "material-icons">skip_next</i></button>
+      </div>
+      <!-- volume bar -->
+      <div class="volume-bar">
+         <div class="volume-down"><i class="material-icons">volume_down</i></div>
+         <div class="volume-level" id="vl0"></div>
+         <div class="volume-level" id="vl1"></div>
+         <div class="volume-level" id="vl2"></div>
+         <div class="volume-level" id="vl3"></div>
+         <div class="volume-level" id="vl4"></div>
+         <div class="volume-level" id="vl5"></div>
+      </div>
+      <!-- volume controls -->
+      <button class="volume-rocker" onclick="volDown()">&mdash;</button>         
+      <button class="volume-rocker" onclick="volUp()">+</button>
+   </div>
+<script src="ipod.js"></script>
+</body>
+</html>
+<!-- 
+* bg iphone img is 363x762px
+* iphone 'screen' is apprx 300x530 -->
